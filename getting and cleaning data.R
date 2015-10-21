@@ -50,10 +50,13 @@ newdata<-mutate(newdata,subject=as.factor(newdata[,1]))
 t1<-function(x){
   tapply(x,newdata$subject,mean)
 }
-t2<-unction(x){
+t2<-function(x){
   tapply(x,newdata$activity,mean)
 }
 fdata<-newdata[,-c(1:2)]
 # get the final results
 result_subject<-as.data.frame(lapply(fdata,t1))
 result_activity<-as.data.frame(lapply(fdata,t2))
+
+write.table(result_subject,file="result_subject.R",row.name=FALSE)
+write.table(result_activity,file="result_activity.R",row.name=FALSE)
