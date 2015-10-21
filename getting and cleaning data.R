@@ -58,5 +58,5 @@ fdata<-newdata[,-c(1:2)]
 result_subject<-as.data.frame(lapply(fdata,t1))
 result_activity<-as.data.frame(lapply(fdata,t2))
 
-write.table(result_subject,file="result_subject.R",row.name=FALSE)
-write.table(result_activity,file="result_activity.R",row.name=FALSE)
+write.table(result_subject,file="result_subject.txt",row.name=FALSE)
+write.table(result_activity,file="result_activity.txt",row.name=FALSE)
